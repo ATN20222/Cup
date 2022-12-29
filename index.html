@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script type="text/javascript" >
+
+      $(document).ready(function(){
+        $(".form").on('submit' , function(e){
+          e.preventDefault();
+          var name=$(".name").val();
+          var email=$(".email").val();
+          var pnumber=$(".pnumber").val();
+          $.post("https://script.google.com/macros/s/AKfycbxGaaH1PVncNvDGHpZ5W_06PwfKDXK2ceqHbiUECQdTt5lsNbUt4DJupv-aNkDS9spg/exec" , {n:name , e:email , p:pnumber} , function(){
+            alert("✔ Successfull process");
+          });
+        });
+      });
+
+    </script>
+    <title>Elka2ed Educational Cup</title>
+</head>
+<body>
+
+
+    <div class="login-box ball">
+        <h2>Elka2ed Educational Cup🏆📖</h2>
+        <form method="post"  class="form">
+          <div class="user-box">
+            <input type="text" name="" required="" class="name">
+            <label>Full Name</label>
+          </div>
+          <div class="user-box">
+            <input type="email" name="" required="" class="email">
+            <label>Email</label>
+          </div>
+          <div class="user-box">
+            <input type="text" name="" required="" class="pnumber">
+            <label>Phone Number</label>
+          </div>
+          <div  id="ticket">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <input class="submit" type="submit" style="color: aqua; background-color: transparent; outline: none ; border: none; font-size: large;" value="Get Ticket">
+        </form>
+      </div>
+
+
+
+
+    <script src="js/all.min.js"></script>
+    <script src="main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
